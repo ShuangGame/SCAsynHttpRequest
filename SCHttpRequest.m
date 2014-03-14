@@ -39,7 +39,6 @@
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
                                    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
-                                   NSLog(@"code %d",[httpResponse statusCode] );
                                    if ([data length] >0 && error == nil && [httpResponse statusCode] == 200)
                                    {
                                        NSString *astr=[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
